@@ -1,0 +1,232 @@
+// Hero
+.hero {
+    &__container {
+        width: 100%;
+        position: relative;
+        display: flex;
+    }
+    &__content-wrapper {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__content {
+        margin-top: 18rem;
+    }
+}
+.content { 
+    &__main-title {
+        font-size: 4rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &__gray-title {
+        font-weight: 300;
+        color: gray;
+    }
+    &__slider-buttons {
+        margin: 90px 0;
+        display: flex;
+        align-items: center;
+        &::after {
+            content: '';
+            background-color: #F2F2F2;
+            height: 2px;
+            width: 100%;   
+            display: block;     
+        }
+    }
+}
+
+.nav-button {
+    position: relative; 
+    display: flex;
+    align-items: center;
+    width: auto;
+    border: 1px #F2F2F2 solid;
+    &:first-child {
+        margin-right: 23px;
+    }
+    &__arrow-left {
+        transform: rotate(180deg);
+        padding: 14px;
+    }
+    &__arrow-right {
+        background-color: #F9F9F9;
+        padding: 14px;
+        position: relative;
+    }
+    
+}
+
+.content__slides-index {
+    font-size: 24px;
+    color: $indexColor;
+    display: flex;
+    align-items: center;
+}
+.slides-index__line {
+    display: flex;
+    padding: 0 25px;
+    &::after {
+        content: '';
+        background-color: #E0E0E0;
+        height: 2px;
+        width: 44px;
+        transform: rotate(-45deg);
+        
+    }
+}
+.hero__slider {
+}
+.slider__img-wrapper {
+    position: relative;
+}
+.button__white-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+// About section
+.about {
+    &__container {
+        margin: 120px 0;
+    }
+    &__content {
+        background-color: $aboutBckgrColor;
+        display: flex;
+        padding: 0 100px;
+    }
+}
+.content {
+    &__gallery {
+    }
+    &__text-wrapper {
+        padding: 30px;
+    }
+    &__title {
+        // padding: 30px;
+    }
+    &__text {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.7;
+        padding: 20px 0;
+    }
+}
+.content__gallery {
+    display: grid;
+    grid-template-columns: repeat(2, auto); 
+    grid-auto-rows: max-content;
+    gap: 30px;
+}
+.gallery__photo-wrapper {
+    background-color: #C4C4C4;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 270px;
+}
+.photo1 {
+    height: 270px;
+    background-image: url(../img/about1-photo.png);
+    margin-top: 30px;
+}
+.photo2 {
+    height: 345px;
+    background-image: url(../img/about2-photo.png);
+    margin: 60px 0;
+    grid-row: span 2;
+}
+.photo3 {
+    height: 140px;
+    background-image: url(../img/about3-photo.png);
+}
+
+
+// Sertificats or Main goals section
+.sertificats {
+    &__container {
+    }
+    &__title {
+        margin-bottom: 60px;
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        gap: 180px;
+    }
+}
+
+.content {
+    &__wrapper {
+        display: flex;
+        gap: 1.875rem;
+        // min-width: 400px;
+    }
+    &__index {
+        font-size: 100px;
+        font-weight: bold;
+        font-family: $OpenSansFontFamily;
+        color: #E0E0E0;
+    }
+    &__goal {
+        font-size: 22px;
+        line-height: 1.6;
+    }
+}
+
+// 
+
+.projects {
+    &__container {
+        margin: 120px 0;
+    }
+    &__title {
+    }
+    &__gallery {
+        display: grid;
+        grid-template-rows: minmax(255px, 1fr);
+        gap: 1.875rem;
+    }
+}
+
+
+
+.gallery-projects {
+    &__photo-wrapper {
+        background-color: #C4C4C4;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 255px;
+    }
+    &__shadow {
+    }
+    &__title {
+    }
+    &__button {
+    }
+}
+
+.gallery-photo1 {
+    background-image: url("../img/projects1-photo.png");
+}
+.gallery-photo2 {
+    background-image: url("../img/projects2-photo.png");
+}
+.gallery-photo3 {
+    background-image: url("../img/projects3-photo.png");
+    width: 270px;
+}
+.gallery-photo4 {
+    background-image: url("../img/projects4-photo.png");
+    width: 470px;
+    grid-column: span 2 ;
+}
+.gallery-photo5 {
+    background-image: url("../img/projects5-photo.png");
+    width: 370px;
+}

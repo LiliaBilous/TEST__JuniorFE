@@ -1,0 +1,43 @@
+// Header
+.header {
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 6.25rem;
+    }
+    &__logo {
+        width: 70px;
+        height: 40px;
+        margin: 30px 0;
+        img {
+            max-width: 100%;
+        }
+    }
+    &__menu {
+        padding: 0 8.4375rem;
+    }
+}
+
+.menu {
+    margin: 2.8125rem 0;
+    &__list {
+        display: flex;
+        flex-direction: row;
+        gap: 3.75rem;
+    }
+    &__item {
+        padding: 3px;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        transition: 0.3s all ease-in-out;
+        &:hover {
+            border-top: 1px solid $mainColor;
+            border-bottom: 1px solid $mainColor;
+        }
+    }
+    &__link {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+}

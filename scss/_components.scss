@@ -1,0 +1,31 @@
+//Button
+.button__button {
+    width: 13.875rem;
+    height: 71px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.white-button {
+    background-color: $backgrColor;
+    color: $buttonColor;    
+}
+.button__arrow,
+.white-arrow {
+    margin-left: 12px;
+}
+
+.dark-button {
+    color: $backgrColor;
+    background-color: $buttonColor;
+}
+
+// Title
+.title {
+    font-size: 64px;
+    font-weight: 300;
+    text-transform: capitalize;
+    color: gray;
+}
