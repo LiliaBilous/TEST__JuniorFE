@@ -32,8 +32,8 @@
         border-bottom: 1px solid transparent;
         transition: 0.3s all ease-in-out;
         &:hover {
-            border-top: 1px solid $mainColor;
-            border-bottom: 1px solid $mainColor;
+            border-top: 1px solid $colorBlack;
+            border-bottom: 1px solid $colorBlack;
         }
     }
     &__link {

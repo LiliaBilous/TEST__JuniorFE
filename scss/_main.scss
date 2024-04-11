@@ -10,12 +10,12 @@
 [class*="__container"] {
     max-width: 75rem;
     margin: 0 auto;
-    // padding: 0 8.4375rem;
+    padding: 0 0.5rem;
 }
 body {
     font-family: $mainFontFamily, sans-serif; 
     font-size: $fontSize;
-    color: $mainColor;
-    background-color: $backgrColor;
+    color: $colorBlack;
+    background-color: $colorWhite;
 }
 
