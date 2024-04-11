@@ -1,4 +1,4 @@
-// Hero
+// Hero section
 .hero {
     &__container {
         width: 100%;
@@ -22,7 +22,7 @@
     }
     &__gray-title {
         font-weight: 300;
-        color: gray;
+        color: $grayColor;
     }
     &__slider-buttons {
         margin: 90px 0;
@@ -30,7 +30,7 @@
         align-items: center;
         &::after {
             content: '';
-            background-color: #F2F2F2;
+            background-color: $lightButtonsColor;
             height: 2px;
             width: 100%;   
             display: block;     
@@ -43,7 +43,7 @@
     display: flex;
     align-items: center;
     width: auto;
-    border: 1px #F2F2F2 solid;
+    border: 1px $lightButtonsColor solid;
     &:first-child {
         margin-right: 23px;
     }
@@ -61,7 +61,7 @@
 
 .content__slides-index {
     font-size: 24px;
-    color: $indexColor;
+    color: $grayColor;
     display: flex;
     align-items: center;
 }
@@ -70,7 +70,7 @@
     padding: 0 25px;
     &::after {
         content: '';
-        background-color: #E0E0E0;
+        background-color: $lightGrayColor2;
         height: 2px;
         width: 44px;
         transform: rotate(-45deg);
@@ -96,7 +96,7 @@
        
     }
     &__content {
-        background-color: $aboutBckgrColor;
+        background-color: $lightGrayColor;
         display: flex;
         padding: 0 100px;
     }
@@ -124,7 +124,7 @@
     gap: 30px;
 }
 .gallery__photo-wrapper {
-    background-color: #C4C4C4;
+    background-color: $grayColor4;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -171,7 +171,7 @@
         font-size: 100px;
         font-weight: bold;
         font-family: $OpenSansFontFamily;
-        color: #E0E0E0;
+        color: $lightGrayColor2;
     }
     &__goal {
         font-size: 22px;
@@ -179,7 +179,7 @@
     }
 }
 
-// Projects
+// Projects section
 
 .projects {
     margin: 120px 0;
@@ -203,7 +203,7 @@
     margin: 30px 0;
     }
     &__photo-wrapper {
-        background-color: #C4C4C4;
+        background-color: $grayColor4;
         height: 255px;
     }
     &__shadow {
@@ -275,88 +275,124 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        gap: 0.625rem;
+        gap: 10px;
     }
     &__photo-wrapper{
         width: 60%;
     }
 }
 
-
 .form {
+    font-size: 14px;
+    letter-spacing: 1px;
     &__item {
+        display: flex;
+        align-items: center;
     }
     &__input {
         position: relative;
         height: 46px;
-        background-color: #F3F3F3;
+        background-color: $lightGrayColor3;
         padding: 15px 20px;
         width: 100%;
         &::placeholder {
             font-size: 14px;
+            letter-spacing: 1px;
             color: #8D8D8D;
+            text-align: left;
         }
-        
     }
 }
-.input {
-    &-name {
+
+.input-name {
+    &::placeholder {
+        font-weight: bold;
         &::after {
-            content: '*';
-            background-color: #C30000;
-            position: absolute;
-            left: 0;
-            top: 0;
-            z-index: 1;
-          }
+            content: "*";
+            color: $redColor;
+            z-index: 20;
+        }
     }
-    &-tel {
+}
+.input-tel {
+    &::placeholder {
+        font-weight: bold;
         &::after {
-            content: '*';
-            color: C30000;
-            position: absolute;
-            left: 0;
-            top: 0;
-            z-index: 1;
-          }
+            content: "*";
+            color: $redColor;
+            z-index: 20;
+        }
     }
-    .input-mail {
+}
+.input-mail {
+    &::placeholder {
+        font-weight: bold;
         &::after {
-            content: '*';
-            color: red; // червоний колір для зірочки
-            position: absolute;
-            left: 0;
-            top: 0;
-            z-index: 1;
-          }
+            content: "*";
+            color: $redColor;
+            z-index: 20;
+        }
     }
-    .input-product {
-    }
-    .input-message {
-        height: 147px;
+}
+.input-product {
+}
+.input-message {
+    height: 147px;
+    
+    &::placeholder {
+        font-weight: bold;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
         &::after {
-            content: '*';
-            color: red; 
-            
-          }
+            content: "*";
+            color: $redColor;
+            z-index: 20;
+        }
     }
-    .input-checkbox {
-    }
+}
+ 
+.input-checkbox {
+    height: 0;
+    width: 0;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
 }
 
 .label-checkbox {
-}
-
-.form {
-    
-    &__item {
-        
-            
-        
-        
+    background-color: transparent;
+    color: $mainGrayColor;
+    padding: 10px 0 10px 44px;
+    display: flex;
+    align-items: baseline;
+    .input-checkbox:checked + .checkmark::after {
+        display: block;
     }
 }
 
+.checkmark {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    border-radius: 5px;
+    color: $mainGrayColor;
+    background-color: $lightGrayColor3;
+    &::after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 9px;
+        top: 5px;
+        width: 6px;
+        height: 12px;
+        border: solid $mainGrayColor;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+}
 .contacts__photo {
     max-width: 100%;
     height: auto;

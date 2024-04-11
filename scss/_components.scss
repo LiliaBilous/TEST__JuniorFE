@@ -9,8 +9,8 @@
     letter-spacing: 2px;
 }
 .white-button {
-    background-color: $colorWhite;
-    color: $buttonColor;    
+    background-color: $whiteColor;
+    color: $mainGrayColor;    
 }
 .button__arrow,
 .white-arrow {
@@ -18,8 +18,8 @@
 }
 
 .dark-button {
-    color: $colorWhite;
-    background-color: $buttonColor;
+    color: $whiteColor;
+    background-color: $mainGrayColor;
 }
 
 // Title
@@ -27,5 +27,5 @@
     font-size: 64px;
     font-weight: 300;
     text-transform: capitalize;
-    color: gray;
+    color: $grayColor;
 }
