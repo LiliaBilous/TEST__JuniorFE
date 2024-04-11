@@ -7,5 +7,6 @@
 - Додати на свій розсуд CSS анімації, анімації при скролі;
 - Додати на свій розсуд зміну стану елементів (наприклад кнопок) при наведенні;
 
+https://www.figma.com/file/Ilhc5jUaJLXgAXOqm12ri5/TEST-(Copy)?type=design&mode=design&t=KnhelFQJdojdcahR-1
 
 <!-- The best google font alternative for TT Norms Pro are: Roboto, Rubik -->
