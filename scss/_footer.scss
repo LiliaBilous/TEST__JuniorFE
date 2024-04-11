@@ -38,7 +38,7 @@
         align-items: center;
         font-size: 12px;
         font-family: $OpenSansFontFamily;
-        color: $mainGrayColor;
+        color: $grayColor;
         position: relative;
         &::before{
             content: '';
@@ -65,11 +65,19 @@
         
     }
     &__link {
-        padding-bottom: 2px;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        padding: 2px;
         transition: 0.3s all ease-in-out;
         &:hover {
-            color: $mainColor;
+            border-bottom: 1px solid $whiteColor ;
         }
+        &:focus,
+            &:focus-visible {
+                outline: none;
+                border-top: 1px solid $whiteColor;
+                border-bottom: 1px solid $whiteColor;
+            }
     }
 }
 
@@ -87,10 +95,18 @@
         display: flex;
         gap: .9375rem;
         align-items: center;
-        padding-bottom: 2px;
+        padding: 2px;
+        border-top: 1px solid transparent;
         border-bottom: 1px solid transparent;
+        width: max-content;
         transition: 0.3s all ease-in-out;
             &:hover {
+                border-bottom: 1px solid $whiteColor;
+            }
+            &:focus,
+            &:focus-visible {
+                outline: none;
+                border-top: 1px solid $whiteColor;
                 border-bottom: 1px solid $whiteColor;
             }
     }
@@ -104,14 +120,30 @@
     }
     &__list {
         display: flex;
-        gap: 2.5rem;
+        gap: 2rem;
         
     }
     &__item {
+        
     }
     &__link {
+        border: 1px solid transparent;
+        padding: 0.5rem;
+        &:focus,
+        &:focus-visible {
+            outline: none;
+            border-top: 1px solid $whiteColor;
+            border-bottom: 1px solid $whiteColor;
+        }
     }
     &__icon {
+        transition: all 0.3s ease;
+        &:hover {
+            filter: invert(79%) sepia(100%) saturate(0%) hue-rotate(307deg) brightness(111%) contrast(97%);
+        }
+        
     }
 }
-
+.social__link:hover .social__icon{
+    fill: $grayColor;
+}

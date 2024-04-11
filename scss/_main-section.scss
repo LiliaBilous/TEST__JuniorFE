@@ -52,9 +52,17 @@
         padding: 14px;
     }
     &__arrow-right {
-        background-color: #F9F9F9;
         padding: 14px;
         position: relative;
+    }
+    &:hover,
+    &:active {
+        background-color: #F9F9F9;
+    }
+    &:focus,
+    &:focus-visible {
+        outline: none;
+        border: 1px solid $grayColor4;
     }
     
 }
@@ -129,6 +137,10 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: 270px;
+    transition: transform .3s;
+    &:hover{
+        transform: scale(1.1); 
+    }
 }
 .photo1 {
     height: 270px;
@@ -286,8 +298,7 @@
     font-size: 14px;
     letter-spacing: 1px;
     &__item {
-        display: flex;
-        align-items: center;
+        
     }
     &__input {
         position: relative;
@@ -295,44 +306,26 @@
         background-color: $lightGrayColor3;
         padding: 15px 20px;
         width: 100%;
+        border: 1px solid transparent;
         &::placeholder {
             font-size: 14px;
             letter-spacing: 1px;
             color: #8D8D8D;
             text-align: left;
         }
+        &:focus,
+        &:focus-visible{
+            outline: none;
+            border: 1px solid $mainGrayColor;
+        }
     }
 }
 
 .input-name {
-    &::placeholder {
-        font-weight: bold;
-        &::after {
-            content: "*";
-            color: $redColor;
-            z-index: 20;
-        }
-    }
 }
 .input-tel {
-    &::placeholder {
-        font-weight: bold;
-        &::after {
-            content: "*";
-            color: $redColor;
-            z-index: 20;
-        }
-    }
 }
 .input-mail {
-    &::placeholder {
-        font-weight: bold;
-        &::after {
-            content: "*";
-            color: $redColor;
-            z-index: 20;
-        }
-    }
 }
 .input-product {
 }
@@ -340,15 +333,9 @@
     height: 147px;
     
     &::placeholder {
-        font-weight: bold;
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
-        &::after {
-            content: "*";
-            color: $redColor;
-            z-index: 20;
-        }
     }
 }
  
@@ -358,9 +345,11 @@
     position: absolute;
     opacity: 0;
     cursor: pointer;
+    
 }
 
 .label-checkbox {
+    position: relative;
     background-color: transparent;
     color: $mainGrayColor;
     padding: 10px 0 10px 44px;
@@ -369,6 +358,7 @@
     .input-checkbox:checked + .checkmark::after {
         display: block;
     }
+    
 }
 
 .checkmark {
@@ -380,6 +370,7 @@
     border-radius: 5px;
     color: $mainGrayColor;
     background-color: $lightGrayColor3;
+    border: 1px solid transparent;
     &::after {
         content: "";
         position: absolute;
@@ -391,6 +382,11 @@
         border: solid $mainGrayColor;
         border-width: 0 2px 2px 0;
         transform: rotate(45deg);
+    }
+    &:focus,
+    &:focus-visible{
+        outline: none;
+        border: 1px solid $mainGrayColor;
     }
 }
 .contacts__photo {

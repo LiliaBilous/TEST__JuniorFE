@@ -1,12 +1,20 @@
 //Button
 .button__button {
-    width: 13.875rem;
-    height: 71px;
+    width: 13.75rem;
+    height: 4.375rem;
     display: flex;
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
     letter-spacing: 2px;
+    border: 1px solid transparent;
+    transition: all ease 0.3s ;
+    &:focus,
+    &:hover,
+    &:focus-visible {
+        outline: none;
+        border: 1px solid $mainColor;
+    }
 }
 .white-button {
     background-color: $whiteColor;
@@ -20,6 +28,16 @@
 .dark-button {
     color: $whiteColor;
     background-color: $mainGrayColor;
+    border: 1px solid transparent;
+    &:focus,
+    &:hover {
+        background-color: $mainColor;
+    }
+    &:focus,
+    &:focus-visible{
+        outline: none;
+        border: 1px solid $grayColor;
+    }
 }
 
 // Title
