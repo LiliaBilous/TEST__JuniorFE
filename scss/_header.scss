@@ -33,9 +33,17 @@
         img {
             max-width: 100%;
         }
+        @media (max-width: $minTablet) {
+            margin: 1rem 0;
+            width: 4rem;
+            height: 2rem;
+        }
     }
     &__menu {
         // padding: 0 8.4375rem;
+        @media(max-width: $minTablet) {
+            padding: 0;
+        }
     }
 }
 
@@ -45,7 +53,6 @@
     align-items: center;
     &__burger-icon{
         display: none;
-        
         @media(max-width: $minTablet) {
            display: block;
            position: relative;

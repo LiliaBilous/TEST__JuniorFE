@@ -1,37 +1,58 @@
 //Button
-.button__button {
-    width: 13.75rem;
-    height: 4.375rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border: 1px solid transparent;
-    transition: all ease 0.3s ;
-    &:focus,
-    &:hover,
-    &:focus-visible {
-        outline: none;
-        border: 1px solid $mainColor;
-    }
+.button {
+    &__button {
+        width: 13.75rem;
+        height: 4.375rem;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: all ease 0.3s;
+        svg {
+            fill: currentColor;
+            transition: transform 0.2s ease;
+        }
+        &:hover {
+          background-color: $grayColor;
+          color: $whiteColor;
+          svg {
+            fill: $whiteColor;
+            transform: translateX(0.5rem);
+          }
+        }
+        &:focus,
+        &:focus-visible {
+            outline: none;
+            border: 1px solid $mainColor;
+        }
+        @media (max-width: $maxMobile) {
+            width: 10rem;
+            height: 4rem;
+        }
+    } 
 }
+
 .white-button {
     background-color: $whiteColor;
     color: $mainGrayColor;    
 }
-.button__arrow,
-.white-arrow {
-    margin-left: 12px;
+.button__arrow {
+    margin-left: .75rem;
+    
 }
 
 .dark-button {
     color: $whiteColor;
     background-color: $mainGrayColor;
     border: 1px solid transparent;
-    &:focus,
+
     &:hover {
-        background-color: $mainColor;
+        color: $mainColor;
+        svg {
+            fill: currentColor;
+        }
     }
     &:focus,
     &:focus-visible{
@@ -42,8 +63,11 @@
 
 // Title
 .title {
-    font-size: 64px;
+    font-size: 4rem;
     font-weight: 300;
     text-transform: capitalize;
     color: $grayColor;
+    @media(max-width: $maxMobile) {
+        font-size: 3rem;
+    }
 }

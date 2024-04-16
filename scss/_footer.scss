@@ -10,22 +10,43 @@
     &__content {
         display: flex;
         flex-direction: row;
-        gap: 6.25rem;
         justify-content: space-between;
         width: 100%;
-        padding: 60px 0;
+        padding: 3.75rem 0;
         font-size: 14px;
         font-weight: 500;
         line-height: 1.7;
-    }
+        @media(max-width: $minTablet){
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 2rem;
+            padding: 1rem;
+        }
+        @media(max-width: $maxMobile) {
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+    }  
     &__logo {
+        @media(max-width: $minTablet) {
+            text-align: center;
+            img{
+                height: 4rem;    
+            }
+        }
     }
     &__headers {
         font-size: 16px;
         font-weight: bold;
         padding-bottom: 1.625rem;
+        @media(max-width: $maxMobile) {
+            padding: 1rem 0;
+            // text-align: center;
+        }
     }
     &__menu {
+        
     }
     &__contacts {
     }
@@ -60,6 +81,9 @@
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        @media(max-width: $minTablet) {
+            flex-direction: row;
+        }
     }
     &__item {
         
@@ -67,7 +91,7 @@
     &__link {
         border-top: 1px solid transparent;
         border-bottom: 1px solid transparent;
-        padding: 2px;
+        padding-bottom: 5px;
         transition: 0.3s all ease-in-out;
         &:hover {
             border-bottom: 1px solid $whiteColor ;
@@ -80,13 +104,15 @@
             }
     }
 }
-
-
 .contacts {
+    min-width: 6.25rem;
     &__list {
         display: flex;
         flex-direction: column;
         gap: 2.125rem;
+        @media(max-width: $maxTablet) {
+            gap: 1rem;
+        }
     }
     &__item {
         
@@ -100,15 +126,18 @@
         border-bottom: 1px solid transparent;
         width: max-content;
         transition: 0.3s all ease-in-out;
-            &:hover {
-                border-bottom: 1px solid $whiteColor;
-            }
-            &:focus,
-            &:focus-visible {
-                outline: none;
-                border-top: 1px solid $whiteColor;
-                border-bottom: 1px solid $whiteColor;
-            }
+        &:hover {
+            border-bottom: 1px solid $whiteColor;
+        }
+        &:focus,
+        &:focus-visible {
+            outline: none;
+            border-top: 1px solid $whiteColor;
+            border-bottom: 1px solid $whiteColor;
+        }
+        &:first-child{
+            max-width: 20rem;
+        }
     }
     &__icon {
     }
@@ -116,12 +145,20 @@
 
 
 .social {
+    padding-right: 1rem;
     &__header {
     }
     &__list {
         display: flex;
         gap: 2rem;
-        
+        @media(max-width: $maxTablet) {
+            flex-direction: column;
+            align-items: center;
+        }
+        @media(max-width: $minTablet) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
     }
     &__item {
         
@@ -143,6 +180,7 @@
         }
         
     }
+    
 }
 .social__link:hover .social__icon{
     fill: $grayColor;

@@ -1,0 +1,50 @@
+// Sertificats or Main goals section
+.sertificats {
+    &__container {
+    }
+    &__title {
+        margin-bottom: 1.875rem;
+        @media(max-width: $minTablet) {
+            margin-bottom: 0;
+        }
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        gap: 11.25rem;
+        padding: 1.875rem;
+        @media(max-width: $maxTablet) {
+            gap: 2rem;
+        }
+        @media(max-width: $minTablet) {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1.875rem 0;
+        }
+    }
+}
+
+.content {
+    &__wrapper {
+        display: flex;
+        gap: 1.875rem;
+        line-height: 1.64;
+        align-items: center;
+        @media(max-width: $maxMobile) {
+            line-height: 1.55;
+        }
+    }
+    &__index {
+        font-size: 100px;
+        font-weight: bold;
+        font-family: $OpenSansFontFamily;
+        color: $lightGrayColor2;
+    }
+    &__goal {
+        font-size: 22px;
+        @media(max-width: $maxMobile) {
+            font-size: 18px;
+        }
+    }
+}

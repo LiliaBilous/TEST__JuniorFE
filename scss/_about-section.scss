@@ -1,0 +1,98 @@
+// About section
+.about {
+    margin: 7.5rem 0;
+    @media(max-width: $minTablet) {
+        margin: 3.75rem 0;
+    }
+    &__container {
+       
+    }
+    &__content {
+        position: relative;
+        background-color: $lightGrayColor;
+        display: flex;
+        padding: 1.875rem 6.25rem;
+        gap: 1.875rem;
+        @media(max-width: $maxTablet) {
+            flex-direction: column-reverse;
+            padding: 1.875rem;
+        }
+        @media(min-width: $maxTablet) {
+            padding: 1.875rem;
+        }
+    }
+}
+.content {
+    &__gallery {
+        width: 60%;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 16.875rem); 
+        grid-auto-rows: max-content;
+        gap: 1.875rem;
+        @media(max-width: $maxTablet) {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            width: 100%;
+        }
+        @media(max-width: $maxTablet) {
+            gap: .625rem;
+        }
+    }
+    &__text-wrapper {
+        width: 40%;
+        @media(max-width: $maxTablet) {
+            width: 100%;
+        }
+    }
+    &__title {
+        
+    }
+    &__text {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.7;
+        padding: 20px 0;
+    }
+}
+
+.gallery__photo-wrapper {
+    background-color: $grayColor4;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 270px;
+    transition: transform .3s;
+    &:hover{
+        transform: scale(1.05); 
+    }
+    @media(max-width: $maxTablet) {
+        position: relative;
+        width: 33.33%;
+    }
+}
+.photo1 {
+    height: 16.5rem;
+    background-image: url(../img/about1-photo.png);
+    @media(max-width: $maxTablet) {
+        height: 9rem;
+    }
+}
+.photo2 {
+    height: 21.5rem;
+    background-image: url(../img/about2-photo.png);
+    grid-row: span 2;
+    margin-top: 3.75rem;
+    @media(max-width: $maxTablet) {
+        height: 9rem;
+        margin-top: 0;
+    }
+}
+.photo3 {
+    height: 8.75rem;
+    background-image: url(../img/about3-photo.png);
+    @media(max-width: $maxTablet) {
+        height: 9rem;
+    }
+}
