@@ -41,7 +41,7 @@
     }
     &__menu {
         padding: 0 4rem 0 0;
-        @media(max-width: $minTablet) {
+        @media(max-width: $maxTablet) {
             padding: 0;
         }
     }
