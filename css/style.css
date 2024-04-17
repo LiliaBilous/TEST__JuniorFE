@@ -629,8 +629,13 @@ body {
   position: relative;
   background-color: #FBFBFB;
   display: flex;
-  padding: 1.875rem 3rem;
+  padding: 1.875rem 6.25rem;
   gap: 1.875rem;
+}
+@media (max-width: 70rem) {
+  .about__content {
+    padding: 1.875rem 2rem;
+  }
 }
 @media (max-width: 62rem) {
   .about__content {
