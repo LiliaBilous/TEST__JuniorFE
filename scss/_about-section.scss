@@ -10,7 +10,7 @@
         position: relative;
         background-color: $lightGrayColor;
         display: flex;
-        padding: 1.875rem 6.25rem;
+        padding: 1.875rem 3rem;
         gap: 1.875rem;
         @media(max-width: $maxTablet) {
             flex-direction: column-reverse;
