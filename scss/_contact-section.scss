@@ -37,21 +37,14 @@
     font-size: 14px;
     letter-spacing: 1px;
     &__item {
-        
+        position: relative;
     }
     &__input {
-        position: relative;
         height: 46px;
         background-color: $lightGrayColor3;
         padding: 15px 20px;
         width: 100%;
         border: 1px solid transparent;
-        &::placeholder {
-            font-size: 14px;
-            letter-spacing: 1px;
-            color: #8D8D8D;
-            text-align: left;
-        }
         &:focus,
         &:focus-visible{
             outline: none;
@@ -59,22 +52,9 @@
         }
     }
 }
-.input-name {
-}
-.input-tel {
-}
-.input-mail {
-}
-.input-product {
-}
-.input-message {
+.message {
     height: 147px;
-    
-    &::placeholder {
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-    }
+    font-family: $mainFontFamily;
 }
 .input-checkbox {
     height: 0;
@@ -118,6 +98,7 @@
         transform: rotate(45deg);
     }
     &:focus,
+    &:focus-within,
     &:focus-visible{
         outline: none;
         border: 1px solid $mainGrayColor;
@@ -126,4 +107,33 @@
 .contacts__photo {
     max-width: 100%;
     height: auto;
+}
+
+.placeholder {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #8D8D8D;
+    display: flex;
+    justify-content: center;
+}
+.input-message{
+    top: 15%;
+}
+.input-tel,
+.input-mail,
+.input-message {
+    &::after{
+        content: '*';
+        color: $redColor;
+    }
+}
+.hide {
+    opacity: 0;
+    pointer-events: none;
 }
