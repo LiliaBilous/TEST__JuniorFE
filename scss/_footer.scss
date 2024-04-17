@@ -81,6 +81,7 @@
         gap: 1rem;
         @media(max-width: $minTablet) {
             flex-direction: row;
+            flex-wrap: wrap;
         }
     }
     &__item {
@@ -135,6 +136,9 @@
         }
         &:first-child{
             max-width: 20rem;
+            @media(max-width: $minMobile) {
+                max-width: 15rem;
+            }
         }
     }
     &__icon {

@@ -360,6 +360,7 @@ body {
 @media (max-width: 48rem) {
   .menu-footer__list {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 .menu-footer__link {
@@ -410,6 +411,11 @@ body {
 }
 .contacts__link:first-child {
   max-width: 20rem;
+}
+@media (max-width: 20rem) {
+  .contacts__link:first-child {
+    max-width: 15rem;
+  }
 }
 .social {
   padding-right: 1rem;
