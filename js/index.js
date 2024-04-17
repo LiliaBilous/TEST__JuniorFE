@@ -38,3 +38,29 @@ document.querySelectorAll(".menu__link").forEach((el) => {
     });
   });
 });
+
+// Remove placeholder when entered text
+const inputs = document.querySelectorAll(".form__input");
+
+inputs.forEach((input) => {
+  input.addEventListener("input", function () {
+    const placeholder = this.parentElement.querySelector(".placeholder");
+    if (this.value !== "") {
+      placeholder.classList.add("hide");
+    } else {
+      placeholder.classList.remove("hide");
+    }
+  });
+
+  input.addEventListener("focus", function () {
+    const placeholder = this.parentElement.querySelector(".placeholder");
+    placeholder.classList.add("hide");
+  });
+
+  input.addEventListener("blur", function () {
+    const placeholder = this.parentElement.querySelector(".placeholder");
+    if (this.value === "") {
+      placeholder.classList.remove("hide");
+    }
+  });
+});
