@@ -155,7 +155,7 @@ body {
 .header__menu {
   padding: 0 4rem 0 0;
 }
-@media (max-width: 48rem) {
+@media (max-width: 62rem) {
   .header__menu {
     padding: 0;
   }
@@ -845,10 +845,10 @@ body {
   height: 100%;
   object-fit: cover;
 }
-.projects-gallery__back-shadow {
+.projects-gallery__content {
   position: absolute;
   overflow: hidden;
-  width: 100%;
+  max-width: 100%;
   height: 0;
   bottom: 0;
   left: 0;
@@ -858,27 +858,26 @@ body {
   transition: all 0.5s ease;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  margin: 0 auto;
+  padding: 0 2rem;
 }
 .projects-gallery__title {
   font-weight: bold;
   text-transform: uppercase;
-  text-wrap: wrap;
 }
 @media (max-width: 767px) {
   .projects-gallery__title {
-    font-size: calc(26px + 47.6 * (100vw - 320px) / 1200);
+    font-size: calc(26px + 64.6 * (100vw - 320px) / 1200);
   }
 }
 @media (min-width: 767px) {
   .projects-gallery__title {
-    font-size: calc(26px + 28 * 100vw / 1200);
+    font-size: calc(26px + 38 * 100vw / 1200);
   }
 }
 
-.projects-gallery__photo-wrapper:hover .projects-gallery__back-shadow {
+.projects-gallery__photo-wrapper:hover .projects-gallery__content {
   height: 100%;
 }
 
@@ -907,27 +906,35 @@ body {
   justify-content: flex-end;
 }
 
-.small-title {
-  margin-bottom: 1rem;
-}
 @media (max-width: 767px) {
   .small-title {
-    font-size: calc(20px + 34 * (100vw - 320px) / 1200);
+    font-size: calc(20px + 37.4 * (100vw - 320px) / 1200);
   }
 }
 @media (min-width: 767px) {
   .small-title {
-    font-size: calc(20px + 20 * 100vw / 1200);
+    font-size: calc(20px + 22 * 100vw / 1200);
   }
 }
-@media (max-width: 31.25rem) and (max-width: 767px) {
+@media (max-width: 48rem) and (max-width: 767px) {
   .small-title {
     font-size: calc(26px + 64.6 * (100vw - 320px) / 1200);
   }
 }
-@media (max-width: 31.25rem) and (min-width: 767px) {
+@media (max-width: 48rem) and (min-width: 767px) {
   .small-title {
     font-size: calc(26px + 38 * 100vw / 1200);
+  }
+}
+
+.gallery__item3,
+.gallery__item5 {
+  padding: 0 0 0 0.5rem;
+}
+@media (max-width: 48rem) {
+  .gallery__item3,
+  .gallery__item5 {
+    padding: 0 2rem;
   }
 }
 
