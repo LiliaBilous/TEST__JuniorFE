@@ -1,4 +1,3 @@
-
 // Projects section
 .projects {
     margin: 7.5rem 0;
@@ -24,8 +23,8 @@
         gap: 1.875rem;
         margin: 1.875rem 0;
         @media(max-width: $minTablet){
-            grid-template-rows: repeat(4, auto);
-            grid-template-columns: repeat(1, auto);
+            display: flex;
+            flex-direction: column;
             gap: 1rem;
         }        
     }
@@ -33,75 +32,44 @@
         background-color: $grayColor4;
         height: 15.9375rem;
         position: relative;
-        @media (max-width: $minTablet) {
-            height: 11rem;
+        @media (max-width: $maxTablet) {
+            height: 13rem;
         }
     }
     &__photo {
-        display: block;
         width: 100%;
         height: 100%;
+        object-fit: cover;
     }
     &__back-shadow {
         position: absolute;
+        overflow: hidden;
+        width: 100%;
+        height: 0;
         bottom: 0;
         left: 0;
         right: 0;
         background-color: rgba(52, 52, 52, 0.8);
-        overflow: hidden;
-        width: 100%;
-        height: 0;
-        transition: all .5s ease;
-    }
-    &__content{
-        position: absolute;
         color: white;
-        padding: 2.5rem 3rem;
-        @media (max-width: $maxTablet) {
-            padding: 2rem;
-        }
-        @media (max-width: $minTablet) {
-            padding: 1rem;
-        }
+        transition: all .5s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
     }
     &__title {
-        @include adaptive-font(64, 26);
+        @include adaptive-font(54, 26);
         font-weight: bold;
         text-transform: uppercase;
+        text-wrap: wrap;
     }
-    &__button{
-        display: flex;
-        align-items: center;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin-top: 1rem;
-        padding: 5px;
-        border-bottom: 1px solid transparent;
-        svg {
-            fill: currentColor;
-            transition: transform 0.2s ease;
-        }
-        &:hover {
-            border-bottom: 1px solid $whiteColor;
-            svg {
-                fill: $whiteColor;
-                transform: translateX(0.5rem);
-              }
-        }
-        @media (max-width: $minTablet) {
-            margin-top: 0;
-        }
-    }
+    
 }
 .projects-gallery__photo-wrapper:hover .projects-gallery__back-shadow {
     height: 100%;
   }
-.gallery__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block; 
-}
+
 .gallery__item1 {
     grid-column: 1 / span 2;
 }
@@ -123,13 +91,9 @@
     justify-content: flex-end;
 }
 .small-title {
-    font-size: 40px;
-    text-align: center;
+    @include adaptive-font(40, 20);
     margin-bottom: 1rem;
-    @media (max-width: $minTablet) {
-        font-size: 20px;
+    @media(max-width: $maxMobile) {
+        @include adaptive-font(64, 26);
     }
 }
-// .projects-gallery__content > .small-title {
-//     padding: 3rem;
-// }

@@ -41,13 +41,14 @@
 }
 .content { 
     &__main-title {
-        font-size: 4rem;
+        @include adaptive-font(64, 52);
+        // font-size: 4rem;
         font-weight: 700;
         text-transform: uppercase;
         color: $mainColor;
-        @media (max-width: $minTablet) {
-            font-size: 3rem;
-        }
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
     }
     &__gray-title {
         font-weight: 300;

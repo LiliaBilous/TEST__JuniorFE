@@ -31,6 +31,11 @@
             width: 10rem;
             height: 4rem;
         }
+        @media (max-width: $minMobile) {
+            width: 8rem;
+            height: 4rem;
+            flex-wrap: wrap;
+        }
     } 
 }
 
@@ -40,6 +45,9 @@
 }
 .button__arrow {
     margin-left: .75rem;
+    @media (max-width: $maxMobile) {
+        margin-left: 0;
+    }
     
 }
 
@@ -60,14 +68,39 @@
         border: 1px solid $grayColor;
     }
 }
-
+.projects-gallery {
+    &__button{
+        width: fit-content;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-top: 1rem;
+        padding: 5px;
+        background-color: transparent;
+        border-bottom: 1px solid transparent;
+        transition: all ease 0.3s;
+        svg {
+            fill: currentColor;
+            transition: transform 0.2s ease;
+        }
+        &:hover {
+            border-bottom: 1px solid $whiteColor;
+            svg {
+                fill: $whiteColor;
+                transform: translateX(0.5rem);
+              }
+        }
+        @media (max-width: $minTablet) {
+            margin-top: 0;
+        }
+    }
+}
 // Title
 .title {
-    font-size: 4rem;
+    @include adaptive-font(64, 42);
     font-weight: 300;
     text-transform: capitalize;
     color: $grayColor;
-    @media(max-width: $maxMobile) {
-        font-size: 3rem;
-    }
 }

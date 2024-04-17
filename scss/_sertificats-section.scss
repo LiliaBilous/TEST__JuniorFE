@@ -36,15 +36,12 @@
         }
     }
     &__index {
-        font-size: 100px;
+        @include adaptive-font(100, 50);
         font-weight: bold;
         font-family: $OpenSansFontFamily;
         color: $lightGrayColor2;
     }
     &__goal {
-        font-size: 22px;
-        @media(max-width: $maxMobile) {
-            font-size: 18px;
-        }
+        @include adaptive-font(22, 12);
     }
 }
