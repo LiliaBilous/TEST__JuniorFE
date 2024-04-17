@@ -25,7 +25,6 @@
         }
         @media(max-width: $maxMobile) {
             flex-direction: column;
-            flex-wrap: wrap;
         }
     }  
     &__logo {
@@ -42,7 +41,6 @@
         padding-bottom: 1.625rem;
         @media(max-width: $maxMobile) {
             padding: 1rem 0;
-            // text-align: center;
         }
     }
     &__menu {
@@ -94,14 +92,14 @@
         padding-bottom: 5px;
         transition: 0.3s all ease-in-out;
         &:hover {
-            border-bottom: 1px solid $whiteColor ;
+           color: $grayColor;
         }
         &:focus,
-            &:focus-visible {
-                outline: none;
-                border-top: 1px solid $whiteColor;
-                border-bottom: 1px solid $whiteColor;
-            }
+        &:focus-visible {
+            outline: none;
+            border-top: 1px solid $whiteColor;
+            border-bottom: 1px solid $whiteColor;
+        }
     }
 }
 .contacts {
@@ -127,7 +125,7 @@
         width: max-content;
         transition: 0.3s all ease-in-out;
         &:hover {
-            border-bottom: 1px solid $whiteColor;
+            color: $grayColor;
         }
         &:focus,
         &:focus-visible {
@@ -178,9 +176,7 @@
         &:hover {
             filter: invert(79%) sepia(100%) saturate(0%) hue-rotate(307deg) brightness(111%) contrast(97%);
         }
-        
     }
-    
 }
 .social__link:hover .social__icon{
     fill: $grayColor;
