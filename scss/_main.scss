@@ -21,6 +21,7 @@ body {
     font-size: $fontSize;
     color: $mainColor;
     background-color: $whiteColor;
+    scroll-behavior: smooth;
 }
 
 @mixin adaptive-font($pcSize, $mobSize) {
@@ -33,12 +34,3 @@ body {
         font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
     }
 }
-
-// @mixin addaptiv-font($pcSize, $mobSize) {
-//         font-size: #{$pcSize + px};
-//         @media (max-width: #{$maxWidth + px}){
-//             $addSize: $pcSize - $mobSize;
-//             $maxWidth: $maxWidth - 320;
-//             font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
-//         }
-//     }
