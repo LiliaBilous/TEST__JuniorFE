@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>Test Task Digital Progect by LiliiaBilous</title>
   </head>
   <body>
@@ -45,7 +46,11 @@
         <section id="hero" class="hero">
           <div class="hero__container">
             <div class="hero__content-wrapper">
-              <h1 class="content__main-title">
+              <h1
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                class="content__main-title"
+              >
                 <div class="content__gray-title">Project</div>
                 Home
               </h1>
@@ -145,7 +150,13 @@
                 <div class="gallery__photo-wrapper photo3"></div>
               </div>
               <div class="content__text-wrapper">
-                <h2 class="content__title title">About company</h2>
+                <h2
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                  class="content__title title"
+                >
+                  About company
+                </h2>
                 <div class="content__text">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
@@ -185,7 +196,13 @@
         </section>
         <section id="sertificats" class="sertificats">
           <div class="sertificats__container">
-            <h2 class="sertificats__title title">Main goals</h2>
+            <h2
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              class="sertificats__title title"
+            >
+              Main goals
+            </h2>
             <div class="sertificats__content">
               <div class="content__wrapper">
                 <div class="content__index">1</div>
@@ -207,7 +224,13 @@
         </section>
         <section id="projects" class="projects">
           <div class="projects__container">
-            <h2 class="projects__title title">Our projects</h2>
+            <h2
+              data-aos="fade-right"
+              data-aos-duration="2000"
+              class="projects__title title"
+            >
+              Our projects
+            </h2>
             <div class="projects__gallery projects-gallery">
               <div class="projects-gallery__wrapper">
                 <figure class="projects-gallery__photo-wrapper gallery__item1">
@@ -413,7 +436,13 @@
         </section>
         <section id="contacts" class="contacts">
           <div class="contacts__container">
-            <h2 class="contacts__title title">Contact us</h2>
+            <h2
+              data-aos="fade-right"
+              data-aos-duration="2000"
+              class="contacts__title title"
+            >
+              Contact us
+            </h2>
             <div class="contacts__content">
               <form action="#" class="contacts__form form">
                 <div class="form__item">
@@ -608,8 +637,11 @@
         </div>
       </footer>
     </div>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/index.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
