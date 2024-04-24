@@ -1,8 +1,21 @@
 const path = require("path");
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   mode: "development",
+  devServer: {
+    historyApiFallback: true,
+    static: {
+      directory: path.resolve(__dirname, "dist"),
+    },
+    open: true,
+    compress: true,
+    hot: true,
+    port: 8080,
+  },
   entry: {
     bundle: path.resolve(__dirname, "./src/index.js"),
   },
@@ -11,29 +24,20 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
-  devServer: {
-    static: {
-      directory: path.join(__dirname, "public"),
-    },
-    compress: true,
-    open: true,
-    port: 9000,
-  },
   module: {
     rules: [
       {
-        test: /\.html$/,
-        use: ["html-loader"],
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ["babel-loader"],
       },
       {
-        test: /\.(svg|png|jpg|gif)$/,
-        use: {
-          loader: "file-loader",
-          options: {
-            name: "[name].[hash].[ext]",
-            outputPath: "imgs",
-          },
-        },
+        test: /\.(?:ico|gif|svg|png|jpg|jpeg)$/i,
+        type: "asset/resource",
+      },
+      {
+        test: /\.(woff(2)?|eot|ttf|otf|)$/,
+        type: "asset/inline",
       },
       {
         test: /\.s[ac]ss$/i,
@@ -44,8 +48,17 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "Test Task Digital Progect by LiliiaBilous",
-      filename: "index.html",
+      // filename: "index.html",
       template: "./src/template.html",
     }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "./src/img"),
+          to: path.resolve(__dirname, "./dist/img"),
+        },
+      ],
+    }),
+    new CleanWebpackPlugin(),
   ],
 };
