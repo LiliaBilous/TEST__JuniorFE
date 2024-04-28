@@ -1,5 +1,4 @@
 const path = require("path");
-const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
@@ -48,7 +47,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "Test Task Digital Progect by LiliiaBilous",
-      // filename: "index.html",
+      filename: "index.html",
       template: "./src/template.html",
     }),
     new CopyPlugin({
