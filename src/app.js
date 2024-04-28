@@ -1,5 +1,5 @@
 // Header burger menu
-let menuBtn = document.querySelector(".menu__burger-icon");
+let menuBtn = document.querySelector(".burger");
 let menu = document.querySelector(".menu__body");
 
 menuBtn.addEventListener("click", function () {
