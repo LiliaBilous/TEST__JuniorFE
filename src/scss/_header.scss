@@ -124,5 +124,5 @@
 }
 
 .burger{
-    @include hamburger-menu(20px, #000, 2px, 6px);
+    @include hamburger-menu(20px, $mainColor, 2px, 6px);
 }

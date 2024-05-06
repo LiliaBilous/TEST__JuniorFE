@@ -7,23 +7,6 @@ menuBtn.addEventListener("click", function () {
   menu.classList.toggle("active");
 });
 
-// Hero swiper
-const swiper = new Swiper(".swiper", {
-  // Optional parameters
-  direction: "horizontal",
-  loop: true,
-
-  // Navigation arrows
-  navigation: {
-    nextEl: ".nav-button-right",
-    prevEl: ".nav-button-left",
-  },
-  pagination: {
-    el: ".slider__fraction",
-    type: "fraction",
-  },
-});
-
 // Scrolling to Anchor Smoothly
 document.querySelectorAll(".menu__link").forEach((el) => {
   el.addEventListener("click", function (e) {
