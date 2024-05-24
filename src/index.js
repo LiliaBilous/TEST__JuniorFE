@@ -1,5 +1,9 @@
 import "./scss/style.scss";
 import "./app";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
+
 import Swiper from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
 
